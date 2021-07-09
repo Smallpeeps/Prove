@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AttivitaElencoComponent } from './attivita-elenco/attivita-elenco.component';
+import { AttivitaNuovaComponent } from './attivita-nuova/attivita-nuova.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AttivitaElencoComponent
+    AttivitaElencoComponent,
+    AttivitaNuovaComponent
   ],
   imports: [
     BrowserModule
