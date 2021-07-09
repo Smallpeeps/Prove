@@ -17,4 +17,8 @@ export class AttivitaNuovaComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  aggiungiAttivita() {
+    alert('Hai premuto il pulsante');
+  }
 }
