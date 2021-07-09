@@ -28,7 +28,7 @@ export class AttivitaElencoComponent implements OnInit {
       {
         dataOraInizio: new Date(2021, 6, 9, 8, 32, 0),
         dataOraFine: new Date(2021, 6, 9, 12, 29, 0),
-        descrizione: 'Approfonfimento concetti base Angular',
+        descrizione: 'Approfondimento concetti base Angular',
       },
     ];
   }
