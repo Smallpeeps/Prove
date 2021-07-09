@@ -3,10 +3,12 @@
     <th>Inizio</th>
     <th>Fine</th>
     <th>Descrizione</th>
+    <th>Referente</th>
   </tr>
   <tr *ngFor="let attivita of elencoAttivita">
     <td>{{ attivita.dataOraInizio | date: 'dd/MM/yyyy HH:mm' }}</td>
     <td>{{ attivita.dataOraFine | date: 'dd/MM/yyyy HH:mm' }}</td>
     <td>{{ attivita.descrizione }}</td>
+    <td>{{ nome.cognome.referente }}</td>
   </tr>
 </table>

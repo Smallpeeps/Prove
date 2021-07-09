@@ -19,16 +19,19 @@ export class AttivitaElencoComponent implements OnInit {
         dataOraInizio: new Date(2021, 6, 8, 8, 29, 0),
         dataOraFine: new Date(2021, 6, 8, 12, 31, 0),
         descrizione: 'Apprendimento concetti base Angular',
+        referente: 'Michele BONACINA',
       },
       {
         dataOraInizio: new Date(2021, 6, 8, 14, 2, 0),
         dataOraFine: new Date(2021, 6, 8, 18, 10, 0),
         descrizione: 'Applicazione di esempio',
+        referente: 'Michele BONACINA',
       },
       {
         dataOraInizio: new Date(2021, 6, 9, 8, 32, 0),
         dataOraFine: new Date(2021, 6, 9, 12, 29, 0),
         descrizione: 'Approfondimento concetti base Angular',
+        referente: 'Michele BONACINA',
       },
     ];
   }
