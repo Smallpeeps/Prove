@@ -5,8 +5,8 @@
     <th>Descrizione</th>
   </tr>
   <tr *ngFor="let attivita of elencoAttivita">
-    <td>{{ attivita.dataOraInizio }}</td>
-    <td>{{ attivita.dataOraFine }}</td>
+    <td>{{ attivita.dataOraInizio | date: 'dd/MM/yyyy HH:mm' }}</td>
+    <td>{{ attivita.dataOraFine | date: 'dd/MM/yyyy HH:mm' }}</td>
     <td>{{ attivita.descrizione }}</td>
   </tr>
 </table>
