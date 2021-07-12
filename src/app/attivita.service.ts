@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AttivitaService {
-  elencoAttivita: Attivita[] = [];
+  private elencoAttivita: Attivita[] = [];
 
   constructor() {
     // carica l'elenco delle attività
@@ -30,5 +30,9 @@ export class AttivitaService {
         referente: 'Michele BONACINA',
       },
     ];
+  }
+
+  public elencaAttivita(): Attivita[] {
+    return [...this.elencoAttivita];
   }
 }
