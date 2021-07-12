@@ -1,3 +1,4 @@
+import { AttivitaService } from './../attivita.service';
 import { Attivita } from './../model/attivita';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class AttivitaElencoComponent implements OnInit {
   elencoAttivita: Attivita[] = [];
 
-  constructor() {}
+  constructor(private attivitaService: AttivitaService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.elencoAttivita = this.attivitaService.elencaAttivita();
+  }
 }
