@@ -37,7 +37,7 @@ export class AttivitaService {
   }
 
   public nuovaAttivita(attivita: Attivita) {
-    this.elencoAttivita.push(attivita);
+    this.elencoAttivita.push({ ...attivita });
     console.log(this.elencoAttivita);
   }
 }

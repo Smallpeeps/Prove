@@ -20,6 +20,10 @@ export class AttivitaNuovaComponent implements OnInit {
   ngOnInit(): void {}
 
   aggiungiAttivita() {
+    this.nuovaAttivita.dataOraInizio = new Date(
+      this.nuovaAttivita.dataOraInizio
+    );
+    this.nuovaAttivita.dataOraFine = new Date(this.nuovaAttivita.dataOraFine);
     this.attivitaService.nuovaAttivita(this.nuovaAttivita);
   }
 }
