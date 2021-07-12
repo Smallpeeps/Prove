@@ -1,11 +1,13 @@
 import { Attivita } from './model/attivita';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AttivitaService {
   private elencoAttivita: Attivita[] = [];
+  private elencoAttivita$ = new BehaviorSubject<Attivita[]>([]);
 
   constructor() {
     // carica l'elenco delle attività
@@ -30,14 +32,16 @@ export class AttivitaService {
         referente: 'Michele BONACINA',
       },
     ];
+    // aggiunge l'elenco al subject
+    this.elencoAttivita$.next([...this.elencoAttivita]);
   }
 
-  public elencaAttivita(): Attivita[] {
-    return [...this.elencoAttivita];
+  public elencaAttivita(): Subject<Attivita[]> {
+    return this.elencoAttivita$;
   }
 
   public nuovaAttivita(attivita: Attivita) {
     this.elencoAttivita.push({ ...attivita });
-    console.log(this.elencoAttivita);
+    this.elencoAttivita$.next([...this.elencoAttivita]);
   }
 }
