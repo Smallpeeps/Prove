@@ -35,4 +35,9 @@ export class AttivitaService {
   public elencaAttivita(): Attivita[] {
     return [...this.elencoAttivita];
   }
+
+  public nuovaAttivita(attivita: Attivita) {
+    this.elencoAttivita.push(attivita);
+    console.log(this.elencoAttivita);
+  }
 }

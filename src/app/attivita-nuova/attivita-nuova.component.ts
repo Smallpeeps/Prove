@@ -1,3 +1,4 @@
+import { AttivitaService } from './../attivita.service';
 import { Attivita } from './../model/attivita';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,11 +15,11 @@ export class AttivitaNuovaComponent implements OnInit {
     referente: '',
   };
 
-  constructor() {}
+  constructor(private attivitaService: AttivitaService) {}
 
   ngOnInit(): void {}
 
   aggiungiAttivita() {
-    alert('Hai premuto il pulsante');
+    this.attivitaService.nuovaAttivita(this.nuovaAttivita);
   }
 }
